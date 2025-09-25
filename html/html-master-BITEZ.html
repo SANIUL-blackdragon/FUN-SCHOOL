@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Master BITEZ - Complete HTML Learning Resource</title>
+    
+    <!-- Theme color for browser tab and mobile UI -->
+    <meta name="theme-color" content="#91e3fc">
+    
+    <!-- Mobile web app capabilities -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Windows/Edge taskbar tiles -->
+    <meta name="msapplication-TileColor" content="#91e3fc">
+    
+    <!-- Progressive Web App manifest -->
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Favicon for different devices -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+    
+    <!-- Font imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/CSS/CSS.css">
+</head>
+<body>
+    <!-- Home Button -->
+<div class="home-button-container">
+    <button class="home-button">
+        Home <i class="fas fa-arrow-right ml-2"></i>
+    </button>
+    
+    <script>
+        const button = document.querySelector('.home-button');
+        button.addEventListener('click', () => {
+            const currentUrl = window.location.href;
+            // GitHub Pages
+            if (currentUrl.includes('github.io/Zero-2-Hero-Code-Mastery')) {
+                window.location.href = 'https://saniul-blackdragon.github.io/Zero-2-Hero-Code-Mastery/index.html';
+            } 
+            // Local file or localhost
+            else {
+                // Go up one folder from the current file
+                const pathParts = window.location.pathname.split('/');
+                pathParts.pop(); // remove current file
+                pathParts.pop(); // remove html folder
+                pathParts.push('index.html'); // add root index.html
+                // Rebuild path
+                const newPath = pathParts.join('/');
+                const newUrl = window.location.protocol + '//' + window.location.host + newPath;
+                window.location.href = newUrl;
+            }
+        });
+    </script>
+</div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>HTML Master BITEZ</h1>
+            <p class="subtitle">Complete HTML Learning Resource - From Beginner to Expert</p>
+            <div class="bitez-badge">
+                <i class="fas fa-utensils" style="font-size: 1rem; vertical-align: middle; margin-right: 5px;"></i>
+                BITEZ: Bites of Skill, Not Courses
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Navigation container with toggle button -->
+        <div class="nav-container">
+            <button class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-tabs" id="nav-tabs">
+                <button class="nav-tab active" data-section="introduction" onclick="showSection('introduction')">
+                    <i class="fas fa-home"></i>
+                    Introduction
+                </button>
+                <button class="nav-tab" data-section="basics" onclick="showSection('basics')">
+                    <i class="fas fa-code"></i>
+                    HTML Basics
+                </button>
+                <button class="nav-tab" data-section="elements" onclick="showSection('elements')">
+                    <i class="fas fa-th-large"></i>
+                    Elements
+                </button>
+                <button class="nav-tab" data-section="attributes" onclick="showSection('attributes')">
+                    <i class="fas fa-cogs"></i>
+                    Attributes
+                </button>
+                <button class="nav-tab" data-section="forms" onclick="showSection('forms')">
+                    <i class="fas fa-keyboard"></i>
+                    Forms
+                </button>
+                <button class="nav-tab" data-section="semantic" onclick="showSection('semantic')">
+                    <i class="fas fa-sitemap"></i>
+                    Semantic HTML
+                </button>
+                <button class="nav-tab" data-section="multimedia" onclick="showSection('multimedia')">
+                    <i class="fas fa-photo-video"></i>
+                    Multimedia
+                </button>
+                <button class="nav-tab" data-section="advanced" onclick="showSection('advanced')">
+                    <i class="fas fa-puzzle-piece"></i>
+                    Advanced
+                </button>
+                <button class="nav-tab" data-section="best-practices" onclick="showSection('best-practices')">
+                    <i class="fas fa-star"></i>
+                    Best Practices
+                </button>
+                <button class="nav-tab" data-section="accessibility" onclick="showSection('accessibility')">
+                    <i class="fas fa-universal-access"></i>
+                    Accessibility
+                </button>
+                <button class="nav-tab" data-section="exercises" onclick="showSection('exercises')">
+                    <i class="fas fa-dumbbell"></i>
+                    Exercises
+                </button>
+                <button class="nav-tab" data-section="reference" onclick="showSection('reference')">
+                    <i class="fas fa-book"></i>
+                    Reference
+                </button>
+            </div>
+        </div>
+        
+        <!-- Introduction Section -->
+        <div id="introduction" class="content-section active" data-section="introduction">
+            <div class="section-status" id="introduction-status">
+                <i class="fas fa-circle incomplete"></i> Not Started
+            </div>
+            
+            <h2>Introduction to HTML</h2>
+            
+            <!-- New Progress Layout with Table -->
+            <div class="progress-table-container">
+                <div class="vertical-progress-container">
+                    <div class="vertical-progress-bar" id="vertical-progress-bar">
+                        <div class="vertical-progress-fill" id="vertical-progress"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-level-table-container">
+                    <table class="skill-level-table">
+                        <thead>
+                            <tr>
+                                <th>Tab Title</th>
+                                <th>Skill Level</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-level="0" class="active-row">
+                                <td>Introduction</td>
+                                <td>HTML Novice</td>
+                                <td>Just starting your HTML journey</td>
+                            </tr>
+                            <tr data-level="1">
+                                <td>HTML Basics</td>
+                                <td>Tag Initiate</td>
+                                <td>Learning and implementing basic HTML tags</td>
+                            </tr>
+                            <tr data-level="2">
+                                <td>Elements</td>
+                                <td>Structure Analyst</td>
+                                <td>Understanding and applying HTML elements</td>
+                            </tr>
+                            <tr data-level="3">
+                                <td>Attributes</td>
+                                <td>Attribute Strategist</td>
+                                <td>Mastering attributes and their proper use</td>
+                            </tr>
+                            <tr data-level="4">
+                                <td>Forms</td>
+                                <td>Form Architect</td>
+                                <td>Building interactive forms with precision</td>
+                            </tr>
+                            <tr data-level="5">
+                                <td>Semantic HTML</td>
+                                <td>Markup Designer</td>
+                                <td>Structuring HTML semantically and logically</td>
+                            </tr>
+                            <tr data-level="6">
+                                <td>Multimedia</td>
+                                <td>Media Integrator</td>
+                                <td>Integrating audio, video, and other media content</td>
+                            </tr>
+                            <tr data-level="7">
+                                <td>Advanced</td>
+                                <td>Layout Engineer</td>
+                                <td>Implementing advanced techniques and layouts</td>
+                            </tr>
+                            <tr data-level="8">
+                                <td>Best Practices</td>
+                                <td>Compliance Auditor</td>
+                                <td>Following coding standards and best practices</td>
+                            </tr>
+                            <tr data-level="9">
+                                <td>Accessibility</td>
+                                <td>Theory Master</td>
+                                <td>Full understanding of HTML concepts and inclusive design</td>
+                            </tr>
+                            <tr data-level="10">
+                                <td>Exercises</td>
+                                <td>Practical Developer</td>
+                                <td>Demonstrates full, hands-on coding proficiency</td>
+                            </tr>
+                            <tr data-level="11">
+                                <td>Reference</td>
+                                <td>HTML Master</td>
+                                <td>Complete HTML proficiency across theory and practice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Task progress elements -->
+            <div class="task-progress-container">
+                <div class="task-progress-bar">
+                    <div class="task-progress-fill" id="task-progress">0%</div>
+                </div>
+            </div>
+            
+            <!-- Task number line with horizontal scrolling -->
+            <div class="task-number-line-container">
+                <div class="task-number-line" id="task-number-line">
+                    <!-- Task numbers will be dynamically added here -->
+                </div>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number" id="sections-completed">0</div>
+                    <div class="stat-label">Sections Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="tasks-completed">0</div>
+                    <div class="stat-label">Tasks Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="current-streak">0</div>
+                    <div class="stat-label">Day Streak</div>
+                </div>
+            </div>
+            
+            <h3>What is HTML?</h3>
+            <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It describes the structure of a web page using elements and tags. HTML is the foundation of all websites and web applications.</p>
+            
+            <div class="tip-box">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                    <strong>💡 Fun Fact:</strong> HTML was created by Tim Berners-Lee in 1991 and has evolved significantly since then. The latest version is HTML5, which introduced many new features and capabilities.
+                </div>
+            </div>
+            
+            <h3>Why Learn HTML?</h3>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Foundation</h3>
+                    <p>Essential for creating any website or web application</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Career</h3>
+                    <p>One of the most in-demand skills in the tech industry</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Creative</h3>
+                    <p>Build your own websites and bring ideas to life</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-compass"></i>
+                    <h3>Gateway</h3>
+                    <p>First step to learning CSS, JavaScript, and more</p>
+                </div>
+            </div>
+            
+            <h3>What You Will Learn</h3>
+            <p>This comprehensive <span class="bitez-highlight">BITEZ</span> covers everything you need to become an HTML master:</p>
+            <ul>
+                <li>HTML structure and syntax</li>
+                <li><strong>Complete coverage of all HTML5 elements</strong> - over 100 elements including:
+                    <ul>
+                        <li>Document structure and metadata elements</li>
+                        <li>Text content and formatting elements</li>
+                        <li>Semantic layout elements (header, nav, main, section, article, aside, footer)</li>
+                        <li>Advanced text semantics (abbr, address, bdi, bdo, cite, code, data, dfn, kbd, q, ruby, rt, rp, s, samp, time, var, wbr)</li>
+                        <li>Forms and interactive elements</li>
+                        <li>Multimedia and embedding elements</li>
+                        <li>SVG and MathML integration elements</li>
+                        <li>Legacy and obsolete elements (for understanding existing code)</li>
+                    </ul>
+                </li>
+                <li>Semantic HTML and accessibility best practices</li>
+                <li>Multimedia integration and responsive design</li>
+                <li>Modern web standards and best practices</li>
+                <li>Practical exercises and real-world examples</li>
+            </ul>
+            
+            <h3>How to Use This BITEZ</h3>
+            <p>This <span class="bitez-highlight">BITEZ</span> is designed for self-paced learning. Each section builds upon the previous one, so we recommend following the order. The <span class="bitez-highlight">BITEZ</span> includes:</p>
+            <ul>
+                <li><strong>Theory:</strong> Detailed explanations of concepts</li>
+                <li><strong>Examples:</strong> Code snippets with live demonstrations</li>
+                <li><strong>Interactive Demos:</strong> Try HTML code directly in your browser</li>
+                <li><strong>Exercises:</strong> Practice what you've learned</li>
+                <li><strong>Quizzes:</strong> Test your knowledge</li>
+                <li><strong>Reference:</strong> Quick lookup guide for all HTML elements</li>
+            </ul>
+            
+            <div class="exercise-box">
+                <i class="fas fa-trophy"></i>
+                <div>
+                    <strong>🎯 BITEZ Goal:</strong> By the end of this BITEZ, you will have <strong>complete mastery of all HTML elements</strong> - from the most common to the most obscure. You'll be able to create professional, accessible, and modern HTML websites that follow best practices and web standards, while also understanding legacy code and specialized elements like SVG and MathML.
+                </div>
+            </div>
+            
+            <div class="section-complete-container" style="text-align: center; margin-top: 2rem;">
+                <button class="complete-section-btn" 
+                        id="complete-section-btn" 
+                        data-section="introduction"
+                        data-task="intro-read"
+                        onclick="TaskTracker.completeTask('intro-read', 'introduction')">
+                    <i class="fas fa-check-circle"></i> Mark Introduction as Complete
+                </button>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="#" class="cta-button" onclick="showSection('basics'); return false;">Start Your HTML Journey</a>
+            </div>
+            
+            <!-- Reset/Save Button at bottom right -->
+            <div class="reset-save-container">
+                <button class="reset-save-btn" onclick="BITEZProgress.resetProgress()">
+                    <i class="fas fa-redo"></i> Reset Progress
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Enhanced Tooltip -->
+    <div class="enhanced-tooltip" id="enhanced-tooltip">
+        <div class="tooltip-content">
+            <div class="tooltip-title" id="tooltip-title">HTML Novice</div>
+            <div class="tooltip-description" id="tooltip-description">Just starting your HTML journey</div>
+            <div class="tooltip-progress" id="tooltip-progress">0%</div>
+        </div>
+        <div class="tooltip-arrow"></div>
+    </div>
+    
+    <script src="assets/JS/JS.js"></script>
+</body>
+</html>

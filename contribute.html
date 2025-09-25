@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute - ZERO-2-MASTERY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --turquoise-blue: #5ad0eb;
+            --scandal: #c7f8fa;
+            --curious-blue: #218bc2;
+            --jelly-bean: #296f98;
+            --chathams-blue: #125085;
+            --firefly: #040910;
+            --elephant: #133854;
+            --downriver: #0a2743;
+            --gull-gray: #94acb6;
+            --oxford-blue: #3c515c;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--downriver), var(--firefly));
+            color: var(--scandal);
+            overflow-x: hidden;
+            position: relative;
+        }
+        /* Animated background */
+        .bg-animation {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .bg-animation span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(90, 208, 235, 0.2);
+            animation: move 25s linear infinite;
+            bottom: -150px;
+            border-radius: 50%;
+        }
+        .bg-animation span:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+            background: rgba(90, 208, 235, 0.1);
+        }
+        .bg-animation span:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+            background: rgba(199, 248, 250, 0.1);
+        }
+        .bg-animation span:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+            background: rgba(33, 139, 194, 0.1);
+        }
+        .bg-animation span:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+            background: rgba(41, 111, 152, 0.1);
+        }
+        .bg-animation span:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+            background: rgba(18, 80, 133, 0.1);
+        }
+        .bg-animation span:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+            background: rgba(148, 172, 182, 0.1);
+        }
+        .bg-animation span:nth-child(7) {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+            background: rgba(90, 208, 235, 0.1);
+        }
+        .bg-animation span:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+            background: rgba(60, 81, 92, 0.1);
+        }
+        .bg-animation span:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+            background: rgba(199, 248, 250, 0.1);
+        }
+        .bg-animation span:nth-child(10) {
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+            background: rgba(33, 139, 194, 0.1);
+        }
+        @keyframes move {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 50%;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+        /* Glitch effect for text */
+        .glitch {
+            position: relative;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch::before {
+            animation: glitch-1 0.5s infinite;
+            color: var(--turquoise-blue);
+            z-index: -1;
+        }
+        .glitch::after {
+            animation: glitch-2 0.5s infinite;
+            color: var(--curious-blue);
+            z-index: -2;
+        }
+        @keyframes glitch-1 {
+            0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+            20% { clip-path: inset(20% 0 30% 0); transform: translate(-2px, 2px); }
+            40% { clip-path: inset(50% 0 20% 0); transform: translate(2px, -2px); }
+            60% { clip-path: inset(10% 0 60% 0); transform: translate(-2px, 0); }
+            80% { clip-path: inset(80% 0 5% 0); transform: translate(1px, 0); }
+        }
+        @keyframes glitch-2 {
+            0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+            20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -1px); }
+            40% { clip-path: inset(20% 0 50% 0); transform: translate(-2px, 1px); }
+            60% { clip-path: inset(30% 0 40% 0); transform: translate(1px, 2px); }
+            80% { clip-path: inset(5% 0 80% 0); transform: translate(-1px, -2px); }
+        }
+        /* Neon text effect */
+        .neon-text {
+            text-shadow: 
+                0 0 5px var(--turquoise-blue),
+                0 0 10px var(--turquoise-blue),
+                0 0 20px var(--turquoise-blue),
+                0 0 40px var(--curious-blue);
+        }
+        /* 3D text effect */
+        .text-3d {
+            transform-style: preserve-3d;
+            text-shadow: 
+                0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15);
+        }
+        /* Navbar styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(10, 39, 67, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            z-index: 1000;
+            transform: translateY(-100%);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .navbar.visible {
+            transform: translateY(0);
+        }
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--scandal);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transform: translateZ(20px);
+        }
+        .navbar-logo i {
+            margin-right: 10px;
+            color: var(--turquoise-blue);
+            font-size: 1.8rem;
+            animation: pulse 2s infinite;
+            transform: translateZ(30px);
+        }
+        @keyframes pulse {
+            0% { transform: translateZ(30px) scale(1); }
+            50% { transform: translateZ(30px) scale(1.1); }
+            100% { transform: translateZ(30px) scale(1); }
+        }
+        /* Hamburger button styles */
+        .hamburger {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            transform: translateZ(20px);
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: var(--scandal);
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: all 0.3s ease-in-out;
+        }
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+        .hamburger span:nth-child(2) {
+            top: 10px;
+        }
+        .hamburger span:nth-child(3) {
+            top: 20px;
+        }
+        .hamburger.active span:nth-child(1) {
+            top: 10px;
+            transform: rotate(135deg);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+        .hamburger.active span:nth-child(3) {
+            top: 10px;
+            transform: rotate(-135deg);
+        }
+        /* Sidebar styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background: linear-gradient(145deg, var(--elephant), var(--downriver));
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            transition: right 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            padding: 100px 0 20px;
+            overflow-y: auto;
+        }
+        .sidebar.active {
+            right: 0;
+        }
+        .sidebar-header {
+            padding: 0 30px 20px;
+            border-bottom: 1px solid rgba(90, 208, 235, 0.2);
+            margin-bottom: 20px;
+        }
+        .sidebar-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--scandal);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .sidebar-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 0 30px;
+        }
+        .sidebar-item {
+            padding: 15px 20px;
+            border-radius: 15px;
+            background: rgba(90, 208, 235, 0.1);
+            color: var(--scandal);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transform: translateZ(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .sidebar-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(90, 208, 235, 0.3);
+            transition: left 0.5s ease;
+            transform: translateZ(5px);
+        }
+        .sidebar-item:hover::before {
+            left: 0;
+        }
+        .sidebar-item:hover {
+            transform: translateZ(15px) translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .sidebar-item i {
+            margin-right: 10px;
+            color: var(--turquoise-blue);
+        }
+        /* Overlay for sidebar */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Banner styles */
+        .banner {
+            width: 100%;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .banner-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/indexBanner.webp') center/cover;
+            opacity: 0.3;
+            z-index: -1;
+            transform: translateZ(-50px);
+        }
+        .banner-content {
+            margin-top: 50px;
+            text-align: center;
+            z-index: 2;
+            padding: 0 20px;
+            max-width: 1200px;
+            transform-style: preserve-3d;
+            transform: translateZ(30px);
+        }
+        .banner-title {
+            font-size: 6rem;
+            font-weight: 900;
+            color: var(--scandal);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            transform-style: preserve-3d;
+            transform: translateZ(50px);
+        }
+        .banner-subtitle {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--turquoise-blue);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            transform: translateZ(30px);
+        }
+        /* Main content styles */
+        .main-content {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+        }
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--scandal);
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%) translateZ(30px);
+            font-family: 'Orbitron', sans-serif;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%) translateZ(5px);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--turquoise-blue), var(--curious-blue));
+            border-radius: 2px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        /* Contribution guide styles */
+        .contribute-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .contribute-card {
+            background: rgba(19, 56, 84, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(90, 208, 235, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .contribute-card:hover {
+            transform: translateY(-10px) translateZ(30px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+        .contribute-card-icon {
+            font-size: 3rem;
+            color: var(--turquoise-blue);
+            margin-bottom: 20px;
+            transform: translateZ(20px);
+        }
+        .contribute-card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--scandal);
+            margin-bottom: 15px;
+            font-family: 'Orbitron', sans-serif;
+            transform: translateZ(15px);
+        }
+        .contribute-card-content {
+            color: var(--gull-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            transform: translateZ(10px);
+        }
+        .contribute-card-link {
+            color: var(--turquoise-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            transform: translateZ(10px);
+            display: inline-flex;
+            align-items: center;
+        }
+        .contribute-card-link i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        .contribute-card-link:hover {
+            color: var(--scandal);
+            transform: translateZ(15px) translateY(-3px);
+        }
+        .contribute-card-link:hover i {
+            transform: translateX(5px);
+        }
+        /* Contribution process styles */
+        .process-container {
+            margin-bottom: 60px;
+        }
+        .process-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--scandal);
+            margin-bottom: 30px;
+            font-family: 'Orbitron', sans-serif;
+            transform: translateZ(20px);
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .process-step {
+            background: rgba(19, 56, 84, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(90, 208, 235, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .process-step:hover {
+            transform: translateY(-10px) translateZ(30px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(90deg, var(--turquoise-blue), var(--curious-blue));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--firefly);
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: translateZ(25px);
+        }
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--scandal);
+            margin-bottom: 15px;
+            font-family: 'Orbitron', sans-serif;
+            transform: translateZ(15px);
+        }
+        .step-description {
+            color: var(--gull-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            transform: translateZ(10px);
+        }
+        /* CTA section styles */
+        .cta-section {
+            background: rgba(19, 56, 84, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(90, 208, 235, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--scandal);
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+            transform: translateZ(15px);
+        }
+        .cta-description {
+            color: var(--gull-gray);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            transform: translateZ(10px);
+        }
+        .cta-button {
+            background: linear-gradient(90deg, var(--turquoise-blue), var(--curious-blue));
+            color: var(--firefly);
+            border: none;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            transform: translateZ(20px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            text-decoration: none;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s ease;
+            transform: translateZ(5px);
+        }
+        .cta-button:hover::before {
+            left: 0;
+        }
+        .cta-button:hover {
+            transform: translateZ(30px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(90, 208, 235, 0.4);
+        }
+        /* Footer styles */
+        .footer {
+            background: rgba(4, 9, 16, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(90, 208, 235, 0.2);
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+        }
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--scandal);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Orbitron', sans-serif;
+            transform: translateZ(20px);
+        }
+        .footer-text {
+            font-size: 1rem;
+            color: var(--gull-gray);
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            transform: translateZ(15px);
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            transform-style: preserve-3d;
+            transform: translateZ(20px);
+        }
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(90, 208, 235, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--turquoise-blue);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            transform: translateZ(20px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .social-link:hover {
+            background: rgba(90, 208, 235, 0.4);
+            transform: translateZ(30px) translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        .copyright {
+            font-size: 0.9rem;
+            color: var(--oxford-blue);
+            padding-top: 20px;
+            border-top: 1px solid rgba(90, 208, 235, 0.1);
+            transform: translateZ(10px);
+        }
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .banner-title {
+                font-size: 4rem;
+            }
+            
+            .banner-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .banner-title {
+                font-size: 3rem;
+            }
+            
+            .banner-subtitle {
+                font-size: 1rem;
+            }
+            
+            .navbar-logo {
+                font-size: 1.2rem;
+            }
+            
+            .navbar-logo i {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .contribute-card {
+                padding: 20px;
+            }
+        }
+        /* Interactive cursor effect */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--turquoise-blue);
+            border-radius: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            opacity: 0.5;
+        }
+        .cursor-follower {
+            width: 40px;
+            height: 40px;
+            background: rgba(90, 208, 235, 0.1);
+            border-radius: 50%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9998;
+            transition: all 0.3s ease;
+        }
+        .cursor.hover {
+            transform: translate(-50%, -50%) scale(1.5);
+            background: rgba(90, 208, 235, 0.3);
+        }
+        .cursor-follower.hover {
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+        /* Loading animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--downriver);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-circle {
+            width: 80px;
+            height: 80px;
+            border: 8px solid rgba(90, 208, 235, 0.2);
+            border-top-color: var(--turquoise-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        /* Particle effects */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            background-color: var(--turquoise-blue);
+            border-radius: 50%;
+            opacity: 0.2;
+            pointer-events: none;
+            transform: translateZ(-20px);
+        }
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(90, 208, 235, 0.3);
+            transform: scale(0) translateZ(5px);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4) translateZ(5px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading animation -->
+    <div class="loader" id="loader">
+        <div class="loader-circle"></div>
+    </div>
+    <!-- Custom cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <!-- Animated background -->
+    <div class="bg-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Floating particles background -->
+    <div class="particles" id="particles"></div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>ZERO-2-MASTERY</span>
+        </div>
+        <!-- Hamburger button -->
+        <div class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">Navigation</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="index.html" class="sidebar-item">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="BITEZ.html" class="sidebar-item">
+                <i class="fas fa-book"></i> BITEZ
+            </a>
+            <a href="contact.html" class="sidebar-item">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+            <a href="contribute.html" class="sidebar-item">
+                <i class="fas fa-code-branch"></i> Contribute
+            </a>
+            <a href="README.html" class="sidebar-item">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+        </div>
+    </div>
+    <!-- Overlay for sidebar -->
+    <div class="overlay" id="overlay"></div>
+    <!-- Banner -->
+    <header class="banner" id="banner">
+        <div class="banner-image"></div>
+        <div class="banner-content">
+            <h1 class="banner-title glitch" data-text="CONTRIBUTE">CONTRIBUTE</h1>
+            <p class="banner-subtitle neon-text text-3d">Join our community and help build the future of education</p>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main class="main-content">
+        <h2 class="section-title glitch" data-text="Ways To Contribute">Ways To Contribute</h2>
+        
+        <div class="contribute-container">
+            <!-- Content Creation Card -->
+            <div class="contribute-card">
+                <i class="fas fa-pen-fancy contribute-card-icon"></i>
+                <h3 class="contribute-card-title">Content Creation</h3>
+                <p class="contribute-card-content">
+                    Help create new learning materials, tutorials, and examples. Share your expertise by writing comprehensive guides and creating practical exercises for learners at all levels.
+                </p>
+                <a href="#" class="contribute-card-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Code Contribution Card -->
+            <div class="contribute-card">
+                <i class="fas fa-code contribute-card-icon"></i>
+                <h3 class="contribute-card-title">Code Contribution</h3>
+                <p class="contribute-card-content">
+                    Improve our platform by contributing to the codebase. Fix bugs, add new features, or enhance the user experience. All skill levels are welcome!
+                </p>
+                <a href="#" class="contribute-card-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Translation Card -->
+            <div class="contribute-card">
+                <i class="fas fa-language contribute-card-icon"></i>
+                <h3 class="contribute-card-title">Translation</h3>
+                <p class="contribute-card-content">
+                    Help make our platform accessible to more people by translating content into different languages. Your language skills can help us reach a global audience.
+                </p>
+                <a href="#" class="contribute-card-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Community Support Card -->
+            <div class="contribute-card">
+                <i class="fas fa-users contribute-card-icon"></i>
+                <h3 class="contribute-card-title">Community Support</h3>
+                <p class="contribute-card-content">
+                    Join our community forums and help answer questions from learners. Share your knowledge, provide feedback, and help create a supportive learning environment.
+                </p>
+                <a href="#" class="contribute-card-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Design & UX Card -->
+            <div class="contribute-card">
+                <i class="fas fa-paint-brush contribute-card-icon"></i>
+                <h3 class="contribute-card-title">Design & UX</h3>
+                <p class="contribute-card-content">
+                    Help improve the look and feel of our platform. Contribute design ideas, create illustrations, or help enhance the user experience for better learning outcomes.
+                </p>
+                <a href="#" class="contribute-card-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Testing & Feedback Card -->
+            <div class="contribute-card">
+                <i class="fas fa-bug contribute-card-icon"></i>
+                <h3 class="contribute-card-title">Testing & Feedback</h3>
+                <p class="contribute-card-content">
+                    Help us improve by testing new features and providing constructive feedback. Report bugs, suggest improvements, and help us deliver a better learning experience.
+                </p>
+                <a href="#" class="contribute-card-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Contribution Process -->
+        <div class="process-container">
+            <h2 class="process-title">Contribution Process</h2>
+            
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Get Started</h3>
+                    <p class="step-description">
+                        Create an account on our platform and join our Discord community. Introduce yourself and let us know how you'd like to contribute.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Find a Project</h3>
+                    <p class="step-description">
+                        Browse our list of open issues and projects. Find something that matches your skills and interests, or propose your own idea.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Connect & Collaborate</h3>
+                    <p class="step-description">
+                        Reach out to our team or other contributors working on similar projects. Collaboration is key to creating great learning experiences.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Create & Submit</h3>
+                    <p class="step-description">
+                        Work on your contribution and submit it for review. Our team will provide feedback and help you refine your work before it's published.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2 class="cta-title">Ready to Make a Difference?</h2>
+            <p class="cta-description">
+                Join our community of contributors and help shape the future of education. Whether you're an expert or just starting out, there's a place for you here.
+            </p>
+            <a href="#" class="cta-button">Start Contributing Today</a>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 class="footer-title">Join Our Community</h3>
+            <p class="footer-text">
+                Connect with thousands of learners and experts. Share your knowledge, ask questions, and grow together.
+            </p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-reddit"></i></a>
+            </div>
+            <div class="copyright">
+                © 2023 ZERO-2-MASTERY. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loader when page is loaded
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    document.getElementById('loader').classList.add('hidden');
+                }, 500);
+            });
+            
+            // Create floating particles
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 2px and 6px
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random animation duration between 10s and 30s
+                const duration = Math.random() * 20 + 10;
+                particle.style.animation = `float ${duration}s linear infinite`;
+                
+                // Random animation delay
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            const banner = document.getElementById('banner');
+            let lastScrollTop = 0;
+            
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 100) {
+                    navbar.classList.add('visible');
+                } else {
+                    navbar.classList.remove('visible');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+            
+            // Hamburger menu functionality
+            const hamburger = document.getElementById('hamburger');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            
+            function toggleSidebar() {
+                hamburger.classList.toggle('active');
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+                
+                // Update ARIA attributes
+                const isExpanded = hamburger.classList.contains('active');
+                hamburger.setAttribute('aria-expanded', isExpanded);
+            }
+            
+            function closeSidebar() {
+                hamburger.classList.remove('active');
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+            
+            // Toggle sidebar when hamburger is clicked
+            hamburger.addEventListener('click', toggleSidebar);
+            
+            // Close sidebar when overlay is clicked
+            overlay.addEventListener('click', closeSidebar);
+            
+            // Keyboard navigation for hamburger menu
+            hamburger.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleSidebar();
+                }
+            });
+            
+            // Close sidebar with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                    closeSidebar();
+                }
+            });
+            
+            // Custom cursor
+            const cursor = document.querySelector('.cursor');
+            const cursorFollower = document.querySelector('.cursor-follower');
+            
+            document.addEventListener('mousemove', function(e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                setTimeout(function() {
+                    cursorFollower.style.left = e.clientX + 'px';
+                    cursorFollower.style.top = e.clientY + 'px';
+                }, 100);
+            });
+            
+            // Add hover effect to interactive elements
+            const interactiveElements = document.querySelectorAll('button, a, .card, .sidebar-item, .social-link, .contribute-card-link, .cta-button, .hamburger');
+            
+            interactiveElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    cursor.classList.add('hover');
+                    cursorFollower.classList.add('hover');
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    cursor.classList.remove('hover');
+                    cursorFollower.remove('hover');
+                });
+            });
+            
+            // Sidebar item click handlers
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Close sidebar when a link is clicked
+                    closeSidebar();
+                });
+            });
+            
+            // Social link click handlers
+            const socialLinks = document.querySelectorAll('.social-link');
+            socialLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const platform = this.querySelector('i').classList[1].replace('fa-', '');
+                    console.log(`Opening ${platform}...`);
+                    // In a real implementation, this would open the social media page
+                });
+            });
+            
+            // Add parallax effect to banner image
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.pageYOffset;
+                const bannerImage = document.querySelector('.banner-image');
+                bannerImage.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+            });
+            
+            // Add ripple effect to buttons
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    ripple.classList.add('ripple');
+                    
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
