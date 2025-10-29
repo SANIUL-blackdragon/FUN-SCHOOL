@@ -11228,13 +11228,15 @@ Students will be assessed on their ability to:
 
 ---
 
+
+
 ## Unit P25: Natural Language Processing Advanced
 
 ### P25.1 Unit Description
-This unit covers advanced natural language processing techniques using Python, including transformer models, sentiment analysis, and text generation.
+This unit covers advanced natural language processing techniques using Python, including transformer models, sentiment analysis, and text generation. Students will learn to implement state-of-the-art NLP models and apply them to real-world problems.
 
 ### P25.2 Assessment Information
-- Written examination: __ hour __ minutes
+- Written examination: __ hours
 - __ marks
 - Calculators may not be used
 
@@ -11242,32 +11244,346 @@ This unit covers advanced natural language processing techniques using Python, i
 
 #### Topic 1: Advanced Text Processing
 Students will be assessed on their ability to:
-**1.1** Understand advanced text preprocessing techniques
-**1.2** Know how to implement text representation methods (word embeddings, contextual embeddings)
-**1.3** Be able to use libraries like spaCy and NLTK for advanced NLP
-**1.4** Understand text similarity and semantic analysis
+
+**1.1 Advanced Text Preprocessing**
+- **1.1.1** Understand advanced text normalization techniques
+  - Students should understand advanced text normalization methods beyond basic techniques.
+  - Students should recognize the importance of domain-specific normalization in NLP pipelines.
+  - Students should be able to explain techniques such as lemmatization vs. stemming, handling of special characters, and domain-specific abbreviations.
+
+- **1.1.2** Be able to implement text normalization pipelines
+  - Students should be able to create comprehensive text preprocessing pipelines.
+  - Students should understand how to handle different text encodings and character sets.
+  - Students should be able to explain the trade-offs between different normalization approaches for specific NLP tasks.
+
+- **1.1.3** Understand handling of noisy and unstructured text
+  - Students should understand the challenges of processing noisy text data from social media, forums, and other informal sources.
+  - Students should recognize techniques for handling emojis, hashtags, mentions, and other social media artifacts.
+  - Students should be able to explain how to adapt preprocessing pipelines for different text sources and quality levels.
+
+**1.2 Text Representation Methods**
+- **1.2.1** Understand word embeddings beyond basic models
+  - Students should understand the evolution from basic word embeddings (Word2Vec, GloVe) to more advanced representations.
+  - Students should recognize the limitations of static word embeddings in capturing context.
+  - Students should be able to explain how word embeddings capture semantic relationships between words.
+
+- **1.2.2** Be able to implement contextual embeddings
+  - Students should be able to use libraries like Hugging Face Transformers to generate contextual embeddings.
+  - Students should understand how contextual embeddings differ from static embeddings.
+  - Students should be able to explain how contextual embeddings capture polysemy and context-dependent meanings.
+
+- **1.2.3** Understand subword tokenization methods
+  - Students should understand subword tokenization approaches like Byte Pair Encoding (BPE), WordPiece, and SentencePiece.
+  - Students should recognize the advantages of subword tokenization for handling out-of-vocabulary words.
+  - Students should be able to explain how subword tokenization enables better handling of morphologically rich languages.
+
+- **1.2.4** Be able to implement and evaluate different tokenization strategies
+  - Students should be able to implement various tokenization methods using Python libraries.
+  - Students should understand how to evaluate the effectiveness of different tokenization approaches for specific tasks.
+  - Students should be able to explain the impact of tokenization choices on downstream NLP performance.
+
+**1.3 Advanced NLP Libraries**
+- **1.3.1** Understand the capabilities of spaCy for advanced NLP
+  - Students should understand the architecture and components of spaCy.
+  - Students should recognize the statistical models and linguistic features available in spaCy.
+  - Students should be able to explain how spaCy's processing pipeline works and how to customize it.
+
+- **1.3.2** Be able to use spaCy for linguistic analysis
+  - Students should be able to use spaCy for part-of-speech tagging, dependency parsing, and named entity recognition.
+  - Students should understand how to access and manipulate linguistic annotations in spaCy.
+  - Students should be able to explain how to extend spaCy with custom components and rules.
+
+- **1.3.3** Understand advanced features of NLTK
+  - Students should understand the advanced text processing capabilities of NLTK beyond basic functionality.
+  - Students should recognize the specialized corpora and tools available in NLTK.
+  - Students should be able to explain when to use NLTK versus other NLP libraries for specific tasks.
+
+- **1.3.4** Be able to implement custom NLP pipelines
+  - Students should be able to design and implement custom NLP pipelines combining multiple libraries and techniques.
+  - Students should understand how to optimize pipeline performance for specific use cases.
+  - Students should be able to explain the importance of pipeline modularity and reusability.
+
+**1.4 Text Similarity and Semantic Analysis**
+- **1.4.1** Understand semantic similarity measures
+  - Students should understand different approaches to measuring text similarity: lexical, syntactic, and semantic.
+  - Students should recognize the strengths and limitations of different similarity measures.
+  - Students should be able to explain how vector space models enable semantic similarity computation.
+
+- **1.4.2** Be able to implement text similarity algorithms
+  - Students should be able to implement various text similarity measures using Python.
+  - Students should understand how to choose appropriate similarity metrics for different tasks.
+  - Students should be able to explain how to evaluate the performance of similarity algorithms.
+
+- **1.4.3** Understand semantic analysis techniques
+  - Students should understand techniques for analyzing semantic relationships in text: semantic role labeling, word sense disambiguation.
+  - Students should recognize how semantic analysis contributes to deeper text understanding.
+  - Students should be able to explain the challenges in semantic analysis and current approaches to addressing them.
+
+- **1.4.4** Be able to perform semantic analysis on text corpora
+  - Students should be able to apply semantic analysis techniques to large text collections.
+  - Students should understand how to interpret and visualize semantic relationships.
+  - Students should be able to explain the practical applications of semantic analysis in information retrieval and question answering.
 
 #### Topic 2: Transformer Models
 Students will be assessed on their ability to:
-**2.1** Understand transformer architecture and attention mechanisms
-**2.2** Know how to use pre-trained transformer models (BERT, GPT, etc.)
-**2.3** Be able to fine-tune transformer models for specific tasks
-**2.4** Understand model optimization and deployment
+
+**2.1 Transformer Architecture and Attention Mechanisms**
+- **2.1.1** Understand the evolution from RNNs to Transformers
+  - Students should understand the limitations of earlier sequence models like RNNs and LSTMs.
+  - Students should recognize how Transformers address these limitations.
+  - Students should be able to explain the key innovations introduced by the Transformer architecture.
+
+- **2.1.2** Understand self-attention mechanisms
+  - Students should understand the mathematical formulation of self-attention.
+  - Students should recognize how self-attention enables capturing relationships between all words in a sequence.
+  - Students should be able to explain how attention scores are computed and used.
+
+- **2.1.3** Understand multi-head attention and positional encoding
+  - Students should understand how multi-head attention allows the model to focus on different positions.
+  - Students should recognize the role of positional encoding in providing sequence order information.
+  - Students should be able to explain how these components work together in the Transformer architecture.
+
+- **2.1.4** Be able to implement basic Transformer components
+  - Students should be able to implement self-attention and multi-head attention mechanisms using Python.
+  - Students should understand how to create positional encodings for input sequences.
+  - Students should be able to explain the computational complexity of Transformer components.
+
+**2.2 Pre-trained Transformer Models**
+- **2.2.1** Understand the concept of pre-trained language models
+  - Students should understand the paradigm shift from task-specific models to pre-trained language models.
+  - Students should recognize the different pre-training objectives: masked language modeling, causal language modeling.
+  - Students should be able to explain how transfer learning applies to NLP through pre-trained models.
+
+- **2.2.2** Understand BERT and its variants
+  - Students should understand the architecture and pre-training approach of BERT.
+  - Students should recognize key BERT variants: RoBERTa, ALBERT, DistilBERT, and their innovations.
+  - Students should be able to explain the bidirectional nature of BERT and its implications.
+
+- **2.2.3** Understand GPT and autoregressive models
+  - Students should understand the architecture and pre-training approach of GPT models.
+  - Students should recognize the evolution from GPT-1 to GPT-3 and beyond.
+  - Students should be able to explain the autoregressive nature of GPT and its applications in text generation.
+
+- **2.2.4** Be able to use pre-trained models with Hugging Face Transformers
+  - Students should be able to load and use pre-trained models from the Hugging Face model hub.
+  - Students should understand how to preprocess text for different model architectures.
+  - Students should be able to explain how to interpret model outputs and extract predictions.
+
+**2.3 Fine-tuning Transformer Models**
+- **2.3.1** Understand the fine-tuning process
+  - Students should understand the concept of fine-tuning pre-trained models for specific tasks.
+  - Students should recognize the difference between feature extraction and fine-tuning approaches.
+  - Students should be able to explain when fine-tuning is preferable to using pre-trained models directly.
+
+- **2.3.2** Understand fine-tuning strategies and techniques
+  - Students should understand different fine-tuning strategies: full model fine-tuning, layer-wise learning rates, adapter tuning.
+  - Students should recognize techniques to prevent overfitting in fine-tuning: regularization, early stopping.
+  - Students should be able to explain how to select appropriate hyperparameters for fine-tuning.
+
+- **2.3.3** Be able to implement fine-tuning for classification tasks
+  - Students should be able to fine-tune Transformer models for text classification tasks.
+  - Students should understand how to prepare datasets and create data loaders for fine-tuning.
+  - Students should be able to explain how to evaluate fine-tuned models and interpret results.
+
+- **2.3.4** Be able to implement fine-tuning for sequence labeling tasks
+  - Students should be able to fine-tune Transformer models for sequence labeling tasks like named entity recognition.
+  - Students should understand how to handle token-level labels and alignment with subword tokens.
+  - Students should be able to explain how to evaluate sequence labeling models using appropriate metrics.
+
+**2.4 Model Optimization and Deployment**
+- **2.4.1** Understand model optimization techniques
+  - Students should understand techniques for optimizing Transformer models: quantization, pruning, distillation.
+  - Students should recognize the trade-offs between model size, speed, and performance.
+  - Students should be able to explain how optimization techniques affect model behavior and output quality.
+
+- **2.4.2** Be able to optimize Transformer models
+  - Students should be able to apply optimization techniques to reduce model size and improve inference speed.
+  - Students should understand how to use libraries like Hugging Face Optimum, ONNX Runtime, or TensorRT for optimization.
+  - Students should be able to explain how to evaluate the impact of optimization on model performance.
+
+- **2.4.3** Understand deployment strategies for Transformer models
+  - Students should understand different deployment options: cloud-based, edge computing, serverless.
+  - Students should recognize the considerations for deploying large language models in production.
+  - Students should be able to explain how to design scalable and efficient serving systems for Transformer models.
+
+- **2.4.4** Be able to deploy Transformer models as APIs
+  - Students should be able to create RESTful APIs for serving Transformer model predictions.
+  - Students should understand how to handle model loading, caching, and request batching for efficient serving.
+  - Students should be able to explain how to monitor and maintain deployed NLP models.
 
 #### Topic 3: NLP Applications
 Students will be assessed on their ability to:
-**3.1** Understand how to implement named entity recognition
-**3.2** Know how to develop sentiment analysis systems
-**3.3** Be able to create text summarization systems
-**3.4** Understand machine translation and multilingual NLP
+
+**3.1 Named Entity Recognition**
+- **3.1.1** Understand named entity recognition concepts
+  - Students should understand what named entity recognition is and its importance in NLP pipelines.
+  - Students should recognize different types of named entities: persons, organizations, locations, dates, etc.
+  - Students should be able to explain the difference between rule-based, statistical, and neural approaches to NER.
+
+- **3.1.2** Understand evaluation metrics for NER
+  - Students should understand evaluation metrics for NER: precision, recall, F1-score at entity level.
+  - Students should recognize the challenges of evaluating NER systems, especially with nested or overlapping entities.
+  - Students should be able to explain how to interpret NER evaluation results and diagnose common issues.
+
+- **3.1.3** Be able to implement NER using pre-trained models
+  - Students should be able to use pre-trained Transformer models for named entity recognition.
+  - Students should understand how to process model outputs to extract entities and their types.
+  - Students should be able to explain how to customize pre-trained NER models for specific domains.
+
+- **3.1.4** Be able to train custom NER models
+  - Students should be able to prepare annotated datasets for training custom NER models.
+  - Students should understand how to fine-tune Transformer models for NER tasks.
+  - Students should be able to explain how to handle domain-specific entities and rare entity types in training.
+
+**3.2 Sentiment Analysis Systems**
+- **3.2.1** Understand sentiment analysis approaches
+  - Students should understand different levels of sentiment analysis: document-level, sentence-level, aspect-based.
+  - Students should recognize the evolution from lexicon-based to machine learning to deep learning approaches.
+  - Students should be able to explain the challenges in sentiment analysis: sarcasm, context-dependence, domain adaptation.
+
+- **3.2.2** Understand sentiment intensity and emotion detection
+  - Students should understand the difference between categorical sentiment (positive/negative/neutral) and sentiment intensity.
+  - Students should recognize how sentiment analysis extends to emotion detection (joy, anger, sadness, etc.).
+  - Students should be able to explain the applications of fine-grained sentiment analysis in business and social contexts.
+
+- **3.2.3** Be able to implement sentiment analysis with pre-trained models
+  - Students should be able to use pre-trained models for sentiment classification.
+  - Students should understand how to adapt general sentiment models to specific domains.
+  - Students should be able to explain how to interpret sentiment predictions and confidence scores.
+
+- **3.2.4** Be able to develop aspect-based sentiment analysis
+  - Students should be able to implement systems that identify aspects of entities and their associated sentiments.
+  - Students should understand how to structure aspect-based sentiment analysis as a joint task.
+  - Students should be able to explain how aspect-based sentiment analysis provides more nuanced insights than document-level analysis.
+
+**3.3 Text Summarization Systems**
+- **3.3.1** Understand extractive vs. abstractive summarization
+  - Students should understand the difference between extractive (selecting important sentences) and abstractive (generating new text) summarization.
+  - Students should recognize the advantages and limitations of each approach.
+  - Students should be able to explain how hybrid approaches combine elements of both methods.
+
+- **3.3.2** Understand evaluation metrics for summarization
+  - Students should understand traditional metrics like ROUGE and their limitations.
+  - Students should recognize newer evaluation approaches based on semantic similarity and question answering.
+  - Students should be able to explain how human evaluation complements automatic metrics for summarization.
+
+- **3.3.3** Be able to implement extractive summarization
+  - Students should be able to implement extractive summarization using methods like TextRank, LexRank, or lead-3 baseline.
+  - Students should understand how to identify important sentences in a document using various features.
+  - Students should be able to explain how to evaluate extractive summaries and improve their quality.
+
+- **3.3.4** Be able to implement abstractive summarization
+  - Students should be able to use pre-trained Transformer models like BART, T5, or PEGASUS for abstractive summarization.
+  - Students should understand how to fine-tune abstractive summarization models on domain-specific data.
+  - Students should be able to explain how to control summary length, focus, and style in abstractive systems.
+
+**3.4 Machine Translation and Multilingual NLP**
+- **3.4.1** Understand machine translation paradigms
+  - Students should understand the evolution from rule-based to statistical to neural machine translation.
+  - Students should recognize the impact of Transformer models on machine translation quality.
+  - Students should be able to explain the challenges in machine translation: word order differences, morphology, idioms.
+
+- **3.4.2** Understand multilingual Transformer models
+  - Students should understand how multilingual models like mBERT, XLM-R, and mT5 are trained.
+  - Students should recognize the concept of cross-lingual transfer learning.
+  - Students should be able to explain how multilingual models enable zero-shot cross-lingual transfer.
+
+- **3.4.3** Be able to implement machine translation with pre-trained models
+  - Students should be able to use pre-trained models for translation between language pairs.
+  - Students should understand how to evaluate translation quality using metrics like BLEU.
+  - Students should be able to explain how to adapt translation models for specific domains.
+
+- **3.4.4** Be able to develop multilingual NLP applications
+  - Students should be able to create NLP applications that work across multiple languages.
+  - Students should understand how to handle language identification and language-specific preprocessing.
+  - Students should be able to explain the challenges and best practices in developing multilingual systems.
 
 #### Topic 4: Advanced NLP Techniques
 Students will be assessed on their ability to:
-**4.1** Understand how to implement question answering systems
-**4.2** Know how to develop text generation models
-**4.3** Be able to create dialogue systems and chatbots
-**4.4** Understand ethical considerations in NLP
 
+**4.1 Question Answering Systems**
+- **4.1.1** Understand question answering paradigms
+  - Students should understand the difference between extractive, abstractive, and multiple-choice question answering.
+  - Students should recognize the distinction between open-domain and closed-domain QA systems.
+  - Students should be able to explain how QA systems relate to information retrieval and reading comprehension.
+
+- **4.1.2** Understand QA datasets and evaluation
+  - Students should understand popular QA datasets: SQuAD, Natural Questions, TriviaQA.
+  - Students should recognize evaluation metrics for QA: exact match, F1-score, and their limitations.
+  - Students should be able to explain how different QA datasets test different capabilities of models.
+
+- **4.1.3** Be able to implement extractive question answering
+  - Students should be able to use pre-trained models like BERT for extractive question answering.
+  - Students should understand how to process questions and context passages to identify answer spans.
+  - Students should be able to explain how to handle cases where the answer is not in the provided context.
+
+- **4.1.4** Be able to implement open-domain question answering
+  - Students should be able to build systems that answer questions by first retrieving relevant documents.
+  - Students should understand how to combine information retrieval with reading comprehension models.
+  - Students should be able to explain how to evaluate and improve open-domain QA systems.
+
+**4.2 Text Generation Models**
+- **4.2.1** Understand text generation approaches
+  - Students should understand different text generation approaches: template-based, statistical, neural.
+  - Students should recognize the evolution from n-gram models to RNNs to Transformer-based generation.
+  - Students should be able to explain the challenges in text generation: coherence, relevance, diversity.
+
+- **4.2.2** Understand decoding strategies
+  - Students should understand different decoding strategies: greedy search, beam search, sampling, top-k/nucleus sampling.
+  - Students should recognize how different decoding strategies affect output quality and diversity.
+  - Students should be able to explain how to control generation parameters like temperature and repetition penalty.
+
+- **4.2.3** Be able to implement controlled text generation
+  - Students should be able to use techniques to control the content and style of generated text.
+  - Students should understand how to use prompts, prefix-tuning, and conditional generation.
+  - Students should be able to explain how to evaluate the quality and appropriateness of generated text.
+
+- **4.2.4** Be able to fine-tune text generation models
+  - Students should be able to fine-tune language models for specific text generation tasks.
+  - Students should understand how to prepare datasets and design training procedures for generation.
+  - Students should be able to explain how to address common issues in fine-tuning like mode collapse and repetition.
+
+**4.3 Dialogue Systems and Chatbots**
+- **4.3.1** Understand dialogue system architectures
+  - Students should understand different dialogue system architectures: rule-based, retrieval-based, generative.
+  - Students should recognize the components of dialogue systems: natural language understanding, dialogue management, response generation.
+  - Students should be able to explain the differences between task-oriented and open-domain dialogue systems.
+
+- **4.3.2** Understand conversational AI challenges
+  - Students should understand the challenges in building conversational AI: context management, consistency, coherence.
+  - Students should recognize evaluation challenges for dialogue systems.
+  - Students should be able to explain how different dialogue applications have different requirements and constraints.
+
+- **4.3.3** Be able to implement retrieval-based chatbots
+  - Students should be able to build chatbots that select responses from a predefined set.
+  - Students should understand how to use retrieval models and similarity metrics for response selection.
+  - Students should be able to explain how to evaluate and improve retrieval-based dialogue systems.
+
+- **4.3.4** Be able to implement generative chatbots
+  - Students should be able to build chatbots that generate responses using language models.
+  - Students should understand how to control generation to maintain context and relevance.
+  - Students should be able to explain how to address common issues in generative dialogue like repetition and inconsistency.
+
+**4.4 Ethical Considerations in NLP**
+- **4.4.1** Understand biases in NLP models
+  - Students should understand how biases in training data lead to biases in NLP models.
+  - Students should recognize different types of biases: gender, racial, cultural, and others.
+  - Students should be able to explain how to detect and measure biases in NLP systems.
+
+- **4.4.2** Understand privacy concerns in NLP
+  - Students should understand privacy risks associated with language models and text data.
+  - Students should recognize techniques for preserving privacy in NLP: differential privacy, data anonymization.
+  - Students should be able to explain the trade-offs between model performance and privacy protection.
+
+- **4.4.3** Understand fairness and transparency in NLP
+  - Students should understand the importance of fairness in NLP systems across different user groups.
+  - Students should recognize approaches to improving model fairness: debiasing techniques, inclusive data collection.
+  - Students should be able to explain how to evaluate NLP systems for fairness and transparency.
+
+- **4.4.4** Be able to implement responsible NLP practices
+  - Students should be able to apply techniques to mitigate biases and improve fairness in NLP systems.
+  - Students should understand how to conduct impact assessments for NLP applications.
+  - Students should be able to explain the ethical responsibilities of NLP practitioners and researchers.
 ---
 
 ## Unit P26: Computer Vision Advanced
